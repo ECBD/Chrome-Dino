@@ -1,11 +1,33 @@
-body {
-	margin: 0;
-	padding: 0;
-}
-
+/* Center canvas */
 canvas {
 	display: block;
-	background-color: #f7f7f7;
 	margin: 0 auto;
-	border: 1px solid #ccc;
+}
+
+/* Set background color */
+body {
+	background-color: #f5f5f5;
+}
+
+/* Style game over message */
+.game-over {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 48px;
+	font-family: Arial, sans-serif;
+	color: #333;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+/* Style score and high score */
+.score {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 24px;
+	font-family: Arial, sans-serif;
+	color: #333;
+	text-shadow: 1px 1px 1px #fff;
 }
