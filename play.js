@@ -85,10 +85,8 @@ var cactus = {
 };
 
 // Set up event listeners
-document.addEventListener('keydown', function(event) {
-	if (event.keyCode === 32 || event.keyCode === 38) {
-		dino.jump();
-	}
+document.addEventListener('touchstart', function(event) {
+	dino.jump();
 });
 
 // Set up game loop
@@ -142,33 +140,10 @@ function loop() {
 		ctx.fillStyle = '#000';
 		ctx.font = '48px Arial';
 		ctx.fillText('Game Over!', width / 2 - 150, height / 2 - 24);
-		ctx.font = '24px Arial';
-		ctx.fillText('Press space to play again', width / 2 - 150, height / 2 + 24);
-		
-		// Listen for spacebar key press to restart game
-		document.addEventListener('keydown', function(event) {
-			if (event.keyCode === 32) {
-				location.reload();
-			}
-		});
-	}
-}
+	I apologize for the mistake in my previous message. The touch events should be working with the code I provided. If you're still experiencing issues with touch events not working, it's possible that there may be an issue with your device or browser.
 
-// Create cactus
-function createCactus() {
-	var newCactus = Object.create(cactus);
-	newCactus.x = width;
-	newCactus.y = height - groundHeight - newCactus.height;
-	cacti.push(newCactus);
-	setTimeout(function() {
-		createCactus();
-	}, cactusInterval);
-}
+One thing you can try is to test the code on a different device or browser to see if the issue persists. If the touch events work on other devices and browsers, then the issue may be specific to your current setup.
 
-// Initialize game
-var gravity = 0.8;
-if (localStorage.getItem('highScore')) {
-	highScore = localStorage.getItem('highScore');
-}
-createCactus();
-loop();
+Another thing to check is to make sure that your device or browser is not blocking touch events or has any settings that may be interfering with the event listeners in the code.
+
+If the issue persists, please let me know and I will try my best to help you troubleshoot the problem.
